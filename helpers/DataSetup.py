@@ -104,7 +104,7 @@ def Imagedataloaders(    train_dir: str,
   from torch.utils.data import DataLoader
 
 
-  train_dataset = datasets.Imagefolder(train_dir , transform = transform)
+  train_dataset = datasets.ImageFolder(train_dir , transform = transform)
   test_dataset = datasets.ImageFolder(test_dir , transform = transforms)
 
   train_dataloader = DataLoader(train_dataset , batch_size , True , pin_memory=True)
